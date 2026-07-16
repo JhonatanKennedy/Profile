@@ -4,9 +4,9 @@ import { Button, SectionTitle } from "@jhonatankennedy/ui-react";
 import "./index.css";
 
 const C = {
-  primary: "#fcd12a",
-  secondary: "#0057ff",
-  accent: "#d946ef",
+  primary: "var(--ds-primary)",
+  secondary: "var(--ds-secondary)",
+  accent: "var(--ds-accent)",
 } as const;
 
 type Project = {

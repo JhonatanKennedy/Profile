@@ -48,14 +48,14 @@
   font-family: "Bangers", cursive;
   letter-spacing: 0.05em;
   font-size: 1.875rem;
-  color: #0d0d0d;
+  color: var(--ds-foreground);
 }
 
 .education-subtitle {
   font-family: "Space Mono", monospace;
   font-size: 0.875rem;
   font-weight: 700;
-  color: #0d0d0d;
+  color: var(--ds-foreground);
   margin-top: 0.25rem;
 }
 
@@ -76,5 +76,5 @@
 .education-location {
   font-family: "Space Mono", monospace;
   font-size: 0.75rem;
-  color: #0d0d0d;
+  color: var(--ds-foreground);
 }

@@ -1,11 +1,11 @@
 import { Card, SectionTitle } from "@jhonatankennedy/ui-react";
 import "./styles.css";
 
-const INK = "#0D0D0D";
-const YELLOW = "#FCD12A";
-const BLUE = "#0057FF";
-const RED = "#FF2D2D";
-const GREEN = "#22C55E";
+const INK = "var(--ds-foreground)";
+const YELLOW = "var(--ds-primary)";
+const BLUE = "var(--ds-secondary)";
+const RED = "var(--ds-destructive)";
+const GREEN = "var(--ds-success)";
 
 export function Impact() {
   return (

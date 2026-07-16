@@ -3,14 +3,14 @@ import { Badge, Card } from "@jhonatankennedy/ui-react";
 import "./index.css";
 
 const C = {
-  primary: "#fcd12a",
-  secondary: "#0057ff",
-  neutral: "#0d0d0d",
-  purple: "#8b5cf6",
-  danger: "#ff2d2d",
-  success: "#22c55e",
-  paperLight: "#fefce8",
-  paperDark: "#1a1208",
+  primary: "var(--ds-primary)",
+  secondary: "var(--ds-secondary)",
+  neutral: "var(--ds-foreground)",
+  purple: "var(--ds-info)",
+  danger: "var(--ds-destructive)",
+  success: "var(--ds-success)",
+  paperLight: "var(--ds-background)",
+  paperDark: "var(--ds-sidebar)",
 } as const;
 
 const BORDER = `2px solid ${C.neutral}`;
@@ -44,7 +44,7 @@ export function TimelineEntry({
     <div className="timeline-entry">
       <div
         style={{
-          backgroundColor: "black",
+          backgroundColor: "var(--ds-foreground)",
           border: BORDER,
         }}
         className="timeline-line"

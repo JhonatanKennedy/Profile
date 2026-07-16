@@ -1,5 +1,5 @@
 .project-card {
-  background-color: #fff;
+  background-color: var(--ds-card);
   transition:
     box-shadow 0.15s,
     transform 0.15s;
@@ -9,7 +9,7 @@
   position: relative;
   overflow: hidden;
   height: 220px;
-  background-color: #111;
+  background-color: var(--ds-foreground);
 }
 
 .project-card-img {
@@ -48,8 +48,8 @@
   font-family: "Bangers", cursive;
   font-size: 72px;
   letter-spacing: 0.05em;
-  -webkit-text-stroke: 3px #0d0d0d;
-  text-shadow: 4px 4px 0 #0d0d0d;
+  -webkit-text-stroke: 3px var(--ds-foreground);
+  text-shadow: 4px 4px 0 var(--ds-foreground);
   line-height: 1;
   user-select: none;
 }
@@ -70,7 +70,7 @@
   font-family: "Bangers", cursive;
   letter-spacing: 0.05em;
   font-size: 1.875rem;
-  color: #0d0d0d;
+  color: var(--ds-foreground);
   line-height: 1;
 }
 
@@ -87,7 +87,7 @@
   font-family: "Comic Neue", sans-serif;
   font-weight: 400;
   font-size: 0.875rem;
-  color: #0d0d0d;
+  color: var(--ds-foreground);
   line-height: 1.625;
   margin-bottom: 1rem;
 }
@@ -97,7 +97,7 @@
   flex-wrap: wrap;
   gap: 0.5rem;
   margin-bottom: 1.25rem;
-  border-top: 1.5px solid rgba(13, 13, 13, 0.12);
+  border-top: 1.5px solid color-mix(in srgb, var(--ds-foreground) 12%, transparent);
   padding-top: 16px;
 }
 

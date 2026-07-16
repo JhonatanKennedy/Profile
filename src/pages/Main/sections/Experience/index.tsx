@@ -3,14 +3,14 @@ import { Badge, SectionTitle } from "@jhonatankennedy/ui-react";
 import "./index.css";
 
 const C = {
-  primary: "#fcd12a",
-  secondary: "#0057ff",
-  accent: "#d946ef",
-  destructive: "#ff2d2d",
-  success: "#22c55e",
-  neutral: "#0d0d0d",
-  paperLight: "#fefce8",
-  paperDark: "#1a1208",
+  primary: "var(--ds-primary)",
+  secondary: "var(--ds-secondary)",
+  accent: "var(--ds-accent)",
+  destructive: "var(--ds-destructive)",
+  success: "var(--ds-success)",
+  neutral: "var(--ds-foreground)",
+  paperLight: "var(--ds-background)",
+  paperDark: "var(--ds-sidebar)",
 } as const;
 
 const BORDER = `2.5px solid ${C.neutral}`;
@@ -77,7 +77,7 @@ export function Experience() {
         </div>
 
         <div className="education-wrapper">
-          <SectionTitle>Educação</SectionTitle>
+          <SectionTitle title="Educação" />
           <div
             style={{
               border: BORDER,
@@ -86,7 +86,6 @@ export function Experience() {
             }}
             className="education-card"
           >
-            {/* <Halftone color={C.neutral} opacity={0.07} /> */}
             <div className="education-content">
               <div>
                 <h3 className="education-title">

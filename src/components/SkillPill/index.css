@@ -5,7 +5,7 @@
   padding-bottom: 0.25rem;
   font-size: 0.75rem;
   font-weight: 700;
-  color: #0d0d0d;
+  color: var(--ds-foreground);
   display: inline-block;
   font-family: "Space Mono", monospace;
 }

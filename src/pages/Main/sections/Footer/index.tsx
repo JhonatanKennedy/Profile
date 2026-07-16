@@ -2,8 +2,8 @@ import { Badge } from "@jhonatankennedy/ui-react";
 import "./index.css";
 
 const C = {
-  primary: "#fcd12a",
-  neutral: "#0d0d0d",
+  primary: "var(--ds-primary)",
+  neutral: "var(--ds-foreground)",
 } as const;
 
 const BORDER = `2.5px solid ${C.neutral}`;

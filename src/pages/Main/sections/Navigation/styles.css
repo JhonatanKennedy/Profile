@@ -43,6 +43,6 @@
 }
 
 .nav-link:hover {
-  background-color: #fcd12a;
-  color: #0d0d0d;
+  background-color: var(--ds-primary);
+  color: var(--ds-foreground);
 }

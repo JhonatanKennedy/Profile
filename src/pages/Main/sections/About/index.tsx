@@ -3,14 +3,14 @@ import "./styles.css";
 import { handleLinkClick } from "@/utils/HandleLinkClick";
 
 const C = {
-  primary: "#fcd12a",
-  secondary: "#0057ff",
-  accent: "#d946ef",
-  destructive: "#ff2d2d",
-  success: "#22c55e",
-  neutral: "#0d0d0d",
-  paperLight: "#fefce8",
-  paperDark: "#1a1208",
+  primary: "var(--ds-primary)",
+  secondary: "var(--ds-secondary)",
+  accent: "var(--ds-accent)",
+  destructive: "var(--ds-destructive)",
+  success: "var(--ds-success)",
+  neutral: "var(--ds-foreground)",
+  paperLight: "var(--ds-background)",
+  paperDark: "var(--ds-sidebar)",
 } as const;
 
 const BORDER = `2.5px solid ${C.neutral}`;
@@ -79,7 +79,7 @@ export function About() {
                 fontFamily: F.display,
                 letterSpacing: "0.04em",
                 lineHeight: 0.92,
-                WebkitTextStroke: "2px #fcd12a",
+                WebkitTextStroke: "2px var(--ds-primary)",
                 color: C.paperLight,
               }}
               className="about-title-line1"
@@ -92,7 +92,7 @@ export function About() {
                 letterSpacing: "0.04em",
                 lineHeight: 0.92,
                 color: C.primary,
-                WebkitTextStroke: "2px #fcd12a",
+                WebkitTextStroke: "2px var(--ds-primary)",
                 textShadow: `4px 4px 0 ${C.neutral}`,
               }}
               className="about-title-line2"
@@ -103,7 +103,7 @@ export function About() {
               style={{
                 fontFamily: F.body,
                 fontWeight: 400,
-                color: "#d4cbb8",
+                color: "var(--ds-muted-foreground)",
               }}
               className="about-paragraph"
             >
@@ -166,7 +166,7 @@ export function About() {
               {info.map(({ label, value, icon }) => (
                 <div
                   key={label}
-                  style={{ borderBottom: "1.5px solid rgba(13,13,13,0.1)" }}
+                  style={{ borderBottom: "1.5px solid color-mix(in srgb, var(--ds-foreground) 10%, transparent)" }}
                   className="about-info-row"
                 >
                   <span className="about-info-icon">{icon}</span>

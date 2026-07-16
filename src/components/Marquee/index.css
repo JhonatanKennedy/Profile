@@ -1,7 +1,7 @@
 .marquee-bar {
-  background-color: #0057ff;
-  border-bottom: 2.5px solid #0d0d0d;
-  border-top: 2.5px solid #0d0d0d;
+  background-color: var(--ds-secondary);
+  border-bottom: 2.5px solid var(--ds-border);
+  border-top: 2.5px solid var(--ds-border);
   padding-top: 0.75rem;
   padding-bottom: 0.75rem;
 }
@@ -9,8 +9,8 @@
 .marquee-text {
   font-family: "Bangers", cursive;
   letter-spacing: 0.1em;
-  color: #fcd12a;
-  -webkit-text-stroke: 1px #0d0d0d;
+  color: var(--ds-primary);
+  -webkit-text-stroke: 1px var(--ds-foreground);
   text-align: center;
   font-size: 1.5rem;
   line-height: 2rem;

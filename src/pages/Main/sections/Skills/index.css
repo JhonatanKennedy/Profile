@@ -25,15 +25,15 @@
 .skills-title {
   font-family: "Bangers", cursive;
   letter-spacing: 0.05em;
-  color: #fcd12a;
-  -webkit-text-stroke: 1px #fcd12a;
+  color: var(--ds-primary);
+  -webkit-text-stroke: 1px var(--ds-primary);
   font-size: 2.25rem;
   flex-shrink: 0;
 }
 
 .skills-title-line {
   flex: 1;
-  border-top: 2.5px solid #fcd12a;
+  border-top: 2.5px solid var(--ds-primary);
 }
 
 .skills-grid {
@@ -49,9 +49,9 @@
 }
 
 .skills-card {
-  border: 2.5px solid #0d0d0d;
-  box-shadow: 4px 4px 0px #0d0d0d;
-  background-color: #1f1a0e;
+  border: 2.5px solid var(--ds-border);
+  box-shadow: 4px 4px 0px var(--ds-foreground);
+  background-color: var(--ds-sidebar);
   padding: 1.25rem;
 }
 

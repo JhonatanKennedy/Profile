@@ -15,9 +15,9 @@
 .contact-title {
   font-family: "Bangers", cursive;
   letter-spacing: 0.05em;
-  color: #0d0d0d;
-  -webkit-text-stroke: 1.5px #0d0d0d;
-  text-shadow: 4px 4px 0 #fcd12a;
+  color: var(--ds-foreground);
+  -webkit-text-stroke: 1.5px var(--ds-foreground);
+  text-shadow: 4px 4px 0 var(--ds-primary);
   line-height: 0.9;
   font-size: 4.5rem;
   margin-bottom: 1.5rem;
@@ -33,7 +33,7 @@
   font-family: "Comic Neue", sans-serif;
   font-weight: 700;
   font-size: 1.125rem;
-  color: #0d0d0d;
+  color: var(--ds-foreground);
   margin-bottom: 2rem;
   max-width: 32rem;
   margin-left: auto;

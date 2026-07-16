@@ -71,7 +71,7 @@
 
 .about-card-title {
   font-size: 1.5rem;
-  color: #0d0d0d;
+  color: var(--ds-foreground);
   padding-bottom: 0.75rem;
   margin-bottom: 1.25rem;
 }
@@ -96,7 +96,7 @@
 
 .about-info-label {
   font-size: 10px;
-  color: #888;
+  color: var(--ds-muted-foreground);
   text-transform: uppercase;
   letter-spacing: 0.05em;
 }
@@ -104,6 +104,6 @@
 .about-info-value {
   font-size: 0.75rem;
   font-weight: 700;
-  color: #0d0d0d;
+  color: var(--ds-foreground);
   word-break: break-all;
 }

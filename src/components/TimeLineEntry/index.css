@@ -43,7 +43,7 @@
   letter-spacing: 0.05em;
   font-size: 1.5rem;
   line-height: 2rem;
-  color: #0d0d0d;
+  color: var(--ds-foreground);
 }
 
 .timeline-role-wrapper {
@@ -74,7 +74,7 @@
 .timeline-location {
   font-family: "Space Mono", monospace;
   font-size: 0.75rem;
-  color: #888;
+  color: var(--ds-muted-foreground);
 }
 
 .timeline-bullets {
@@ -99,6 +99,6 @@
   font-family: "Comic Neue", sans-serif;
   font-weight: 400;
   font-size: 0.875rem;
-  color: #0d0d0d;
+  color: var(--ds-foreground);
   line-height: 1.625;
 }
