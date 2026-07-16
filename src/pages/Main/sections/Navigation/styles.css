@@ -46,3 +46,8 @@
   background-color: var(--ds-primary);
   color: var(--ds-foreground);
 }
+
+.nav-utils {
+  display: flex;
+  gap: 8px;
+}

@@ -1,4 +1,4 @@
-import { Button } from "@jhonatankennedy/ui-react";
+import { Button, useTheme } from "@jhonatankennedy/ui-react";
 import "./styles.css";
 import { handleLinkClick } from "@/utils/HandleLinkClick";
 
@@ -27,9 +27,17 @@ const F = {
 const navItems = ["Sobre", "Impacto", "Experiência", "Skills", "Contato"];
 
 export function Navigation() {
+  const { isDark, setTheme } = useTheme();
   const scrollTo = (id: string) => {
     const value = id.toLowerCase().replace("ê", "e").replace("ã", "a");
     document.getElementById(value)?.scrollIntoView({ behavior: "smooth" });
+  };
+  const handleChangeTheme = () => {
+    if (isDark) {
+      setTheme("light");
+      return;
+    }
+    setTheme("dark");
   };
 
   return (
@@ -75,14 +83,19 @@ export function Navigation() {
             </button>
           ))}
         </div>
-        <Button
-          data-href="mailto:jhonatankennedy@live.com"
-          color="primary"
-          size="sm"
-          onClick={handleLinkClick}
-        >
-          Hire Me ⚡
-        </Button>
+        <div className="nav-utils">
+          <Button color="secondary" size="sm" onClick={handleChangeTheme}>
+            {isDark ? "☀" : "☾"}
+          </Button>
+          <Button
+            data-href="mailto:jhonatankennedy@live.com"
+            color="primary"
+            size="sm"
+            onClick={handleLinkClick}
+          >
+            Hire Me
+          </Button>
+        </div>
       </div>
     </nav>
   );
