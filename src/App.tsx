@@ -1,6 +1,5 @@
-import Index from "./pages/Main";
-import NotFound from "./pages/NotFound";
+import { Main } from "./pages/Main";
 
-const App = () => <Index />;
+const App = () => <Main />;
 
 export default App;

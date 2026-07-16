@@ -1,23 +1,25 @@
-// import Navbar from "@/components/Navbar";
-// import Hero from "@/components/Hero";
-// import Skills from "@/components/Skills";
-// import Experience from "@/components/Experience";
-// import Education from "@/components/Education";
-// import Contact from "@/components/Contact";
-// import Footer from "@/components/Footer";
+import { Navigation } from "./sections/Navigation";
+import { About } from "./sections/About";
+import { Impact } from "./sections/Impact";
+import { Marquee } from "@/components/Marquee";
+import { Experience } from "./sections/Experience";
+import { Skills } from "./sections/Skills";
+import { Contact } from "./sections/Contact";
+import { Footer } from "./sections/Footer";
+import { Projects } from "./sections/Projects";
 
-const Index = () => {
+export function Main() {
   return (
-    <div className="min-h-screen bg-background">
-      {/* <Navbar />
-      <Hero />
-      <Skills />
+    <div>
+      <Navigation />
+      <About />
+      <Impact />
+      <Marquee text="ARQUITETURA · PERFORMANCE · QUALIDADE · EXPERIÊNCIA DO USUÁRIO · FULL STACK" />
       <Experience />
-      <Education />
+      <Projects />
+      <Skills />
       <Contact />
-      <Footer /> */}
+      <Footer />
     </div>
   );
-};
-
-export default Index;
+}

@@ -13,6 +13,7 @@
     "test:watch": "vitest"
   },
   "dependencies": {
+    "@jhonatankennedy/ui-react": "^0.2.5",
     "react": "^19.2.7",
     "react-dom": "^19.2.7"
   },

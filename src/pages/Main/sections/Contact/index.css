@@ -1,0 +1,48 @@
+.contact-section {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+
+.contact-container {
+  max-width: 48rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  text-align: center;
+}
+
+.contact-title {
+  font-family: "Bangers", cursive;
+  letter-spacing: 0.05em;
+  color: #0d0d0d;
+  -webkit-text-stroke: 1.5px #0d0d0d;
+  text-shadow: 4px 4px 0 #fcd12a;
+  line-height: 0.9;
+  font-size: 4.5rem;
+  margin-bottom: 1.5rem;
+}
+
+@media (min-width: 1024px) {
+  .contact-title {
+    font-size: 8rem;
+  }
+}
+
+.contact-text {
+  font-family: "Comic Neue", sans-serif;
+  font-weight: 700;
+  font-size: 1.125rem;
+  color: #0d0d0d;
+  margin-bottom: 2rem;
+  max-width: 32rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.contact-buttons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}

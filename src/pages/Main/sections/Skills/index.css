@@ -1,0 +1,70 @@
+.skills-section {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.skills-container {
+  max-width: 72rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  position: relative;
+  z-index: 10;
+}
+
+.skills-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.skills-title {
+  font-family: "Bangers", cursive;
+  letter-spacing: 0.05em;
+  color: #fcd12a;
+  -webkit-text-stroke: 1px #fcd12a;
+  font-size: 2.25rem;
+  flex-shrink: 0;
+}
+
+.skills-title-line {
+  flex: 1;
+  border-top: 2.5px solid #fcd12a;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+  gap: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .skills-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+.skills-card {
+  border: 2.5px solid #0d0d0d;
+  box-shadow: 4px 4px 0px #0d0d0d;
+  background-color: #1f1a0e;
+  padding: 1.25rem;
+}
+
+.skills-category-title {
+  font-family: "Bangers", cursive;
+  letter-spacing: 0.05em;
+  font-size: 1.25rem;
+  padding-bottom: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.skills-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}

@@ -1,0 +1,11 @@
+.skill-pill {
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #0d0d0d;
+  display: inline-block;
+  font-family: "Space Mono", monospace;
+}
