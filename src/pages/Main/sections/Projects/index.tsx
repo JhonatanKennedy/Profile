@@ -1,52 +1,20 @@
-import { ProjectCard } from "@/components/ProjectCard";
+import { ProjectCard, TProject } from "@/components/ProjectCard";
 import { handleLinkClick } from "@/utils/HandleLinkClick";
 import { Button, SectionTitle } from "@jhonatankennedy/ui-react";
 import "./index.css";
 
-const C = {
-  primary: "var(--ds-primary)",
-  secondary: "var(--ds-secondary)",
-  accent: "var(--ds-accent)",
-} as const;
-
-type Project = {
-  title: string;
-  subtitle: string;
-  description: string;
-  image: string;
-  tech: string[];
-  liveUrl: string;
-  githubUrl: string;
-  badge: string;
-  accentColor: string;
-};
-
-const projects: Project[] = [
+const projects: TProject[] = [
   {
-    title: "Analytics Dashboard",
-    subtitle: "Web App · SaaS",
+    title: "Meu system design",
+    subtitle: "My system design",
     description:
-      "Dashboard analítico com 13+ gráficos interativos, métricas em tempo real e performance de ponta: LCP 1.46 s, CLS 0.01, INP 153 ms. Arquitetura baseada em BFF com Node.js e consumo de APIs REST.",
+      "Biblioteca de componentes UI multiplataforma desenvolvida em TypeScript, projetada para reutilização entre diferentes frameworks JavaScript. Focada em consistência visual, modularidade, acessibilidade e facilidade de integração. Atualmente, ela é utilizada como base deste portfólio, centralizando os componentes e estilos compartilhados do projeto.",
     image:
       "https://images.unsplash.com/photo-1658953229625-aad99d7603b4?w=800&h=450&fit=crop&auto=format",
-    tech: ["React", "TypeScript", "Material UI", "Node.js", "PostgreSQL"],
-    liveUrl: "https://jhonatankennedy.github.io/Profile",
-    githubUrl: "https://github.com/JhonatanKennedy",
+    tech: ["React", "TypeScript", "Lit", "vue", "next.js", "nuxt.js", "scss"],
+    githubUrl: "https://github.com/JhonatanKennedy/my-design-system",
     badge: "Web",
-    accentColor: C.primary,
-  },
-  {
-    title: "Mobile Fintech App",
-    subtitle: "React Native · Expo",
-    description:
-      "Aplicativo mobile desenvolvido do zero com arquitetura MVVM em 6 meses. Zero bugs em produção nos 12 meses após o lançamento. Integrações com APIs REST, PostgreSQL e MongoDB.",
-    image:
-      "https://images.unsplash.com/photo-1551650975-87deedd944c3?w=800&h=450&fit=crop&auto=format",
-    tech: ["React Native", "Expo", "TypeScript", "Node.js", "MongoDB"],
-    liveUrl: "https://jhonatankennedy.github.io/Profile",
-    githubUrl: "https://github.com/JhonatanKennedy",
-    badge: "Mobile",
-    accentColor: C.secondary,
+    accentColor: "primary",
   },
 ];
 

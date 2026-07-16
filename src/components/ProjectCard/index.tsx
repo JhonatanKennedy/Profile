@@ -7,30 +7,34 @@ import "./index.css";
 const C = {
   primary: "var(--ds-primary)",
   secondary: "var(--ds-secondary)",
-  neutral: "var(--ds-foreground)",
+  purple: "var(--ds-accent)",
+  ghost: "var(--ds-destructive)",
+  success: "var(--ds-success)",
 } as const;
 
-const BORDER = `2.5px solid ${C.neutral}`;
-const SHADOW = `4px 4px 0px ${C.neutral}`;
-const SHADOW_LG = `6px 6px 0px ${C.neutral}`;
+const BORDER = `2.5px solid ${"var(--ds-foreground)"}`;
+const SHADOW = `4px 4px 0px ${"var(--ds-foreground)"}`;
+const SHADOW_LG = `6px 6px 0px ${"var(--ds-foreground)"}`;
 
-type Project = {
+export type TProject = {
   title: string;
   subtitle: string;
   description: string;
   image: string;
   tech: string[];
-  liveUrl: string;
+  liveUrl?: string;
   githubUrl: string;
   badge: string;
+  accentColor: "primary" | "secondary" | "purple" | "ghost" | "success";
 };
 
 type TProjectCardProps = {
-  project: Project;
+  project: TProject;
 };
 
 export function ProjectCard({ project }: TProjectCardProps) {
   const [hovered, setHovered] = useState(false);
+
   return (
     <div
       style={{
@@ -49,26 +53,9 @@ export function ProjectCard({ project }: TProjectCardProps) {
           style={{ transform: hovered ? "scale(1.04)" : "scale(1)" }}
           className="project-card-img"
         />
-        <div
-          style={{
-            // backgroundImage: `radial-gradient(circle, ${project.accentColor}55 1.5px, transparent 1.5px)`,
-            opacity: hovered ? 0.6 : 0.3,
-          }}
-          className="project-card-halftone"
-        />
+
         <div className="project-card-badge">
           <Badge variant="primary">{project.badge}</Badge>
-        </div>
-        <div
-          style={{ opacity: hovered ? 1 : 0 }}
-          className="project-card-action"
-        >
-          <div
-            // style={{ color: project.accentColor }}
-            className="project-card-action-text"
-          >
-            VIEW!
-          </div>
         </div>
       </div>
       <div className="project-card-content">
@@ -76,7 +63,7 @@ export function ProjectCard({ project }: TProjectCardProps) {
           <div>
             <h3 className="project-card-title">{project.title}</h3>
             <p
-              //   style={{ color: project.accentColor }}
+              style={{ color: C[project.accentColor] }}
               className="project-card-subtitle"
             >
               {project.subtitle}
@@ -86,10 +73,7 @@ export function ProjectCard({ project }: TProjectCardProps) {
         <p className="project-card-description">{project.description}</p>
         <div className="project-card-tech">
           {project.tech.map((t) => (
-            <SkillPill
-              key={t}
-              // color={project.accentColor}
-            >
+            <SkillPill key={t} color={C[project.accentColor]}>
               {t}
             </SkillPill>
           ))}
@@ -97,19 +81,21 @@ export function ProjectCard({ project }: TProjectCardProps) {
         <div className="project-card-links">
           <Button
             data-href={project.githubUrl}
-            variant="primary"
+            variant={project.accentColor}
             onClick={handleLinkClick}
           >
             ⚙ GitHub
           </Button>
-          <Button
-            data-href={project.liveUrl}
-            variant="primary"
-            size="sm"
-            onClick={handleLinkClick}
-          >
-            → Ver Projeto
-          </Button>
+          {project.liveUrl ? (
+            <Button
+              data-href={project.liveUrl}
+              variant={project.accentColor}
+              size="sm"
+              onClick={handleLinkClick}
+            >
+              → Ver Projeto
+            </Button>
+          ) : null}
         </div>
       </div>
     </div>
